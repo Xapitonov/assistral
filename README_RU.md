@@ -1,57 +1,52 @@
-  English | [Русский](README_ru.md)
+<div align="center">
+  <img src="app/src/main/ic_launcher-playstore.png" alt="Assistral Logo" width="128" height="128">
+  
+  # Ассистрал
+  
+  <div align="center">
+  [English](README.md) | <span style="color: #6a737d;">Русский</span>
+</div>
+  <br>
+  Простая обёртка WebView для Mistral Le Chat, блокирующая ненужные URL для сосредоточенного чата.
+</div>
 
-# Release Process
+## Возможности
 
-## Creating a New Release
+- 🔒 **Защита приватности**: Блокирует ненужные URL и трекеры
+- 🎯 **Чистый интерфейс**: Опыт чата без отвлекающих элементов браузера  
+- 🔄 **Переключатель блокировок**: Режимы ограниченные/неограниченные URL
+- 📁 **Поддержка файлов**: Загрузка файлов для анализа и разговоров
+- 🎤 **Голосовой ввод**: Поддержка голосовых бесед
+- 📱 **Легковесное**: Минимальное приложение с основной функциональностью
 
-1. **Update Version Numbers**
-   - Update `versionCode` and `versionName` in `app/build.gradle`
-   - Create a new changelog file in `metadata/en-US/changelogs/{versionCode}.txt`
+## Установка
 
-2. **Create Git Tag**
-   ```bash
-   git tag -a v3.0 -m "Release version 3.0"
-   git push origin v3.0
-   ```
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+alt="Скачать на F-Droid"
+height="80">](https://f-droid.org/packages/org.shano.assistral/)
 
-3. **GitHub Actions**
-   - The release workflow will automatically trigger on tag push
-   - It will build a signed release APK and create a GitHub release
+Или скачайте последнюю версию APK со страницы [Релизы](https://github.com/shano/assistral/releases).
 
-4. **F-Droid Submission**
-   - F-Droid will automatically detect the new release via the metadata files
-   - The app will be built on F-Droid's infrastructure using the metadata configuration
+## Использование
 
-## Setup Instructions for Maintainers
+Приложение не поддерживает вход через аккаунты Apple, Microsoft или Google.
+Для первой регистрации используйте браузер.
 
-### GitHub Secrets (for signed releases)
-Set up these secrets in your GitHub repository:
-- `SIGNING_KEY`: Base64 encoded keystore file
-- `ALIAS`: Key alias
-- `KEY_STORE_PASSWORD`: Keystore password  
-- `KEY_PASSWORD`: Key password
+Включение/отключить блокировок — кнопка в правом верхнем углу.
+Смахните вверх, чтобы скрыть кнопку для чистого вида.
 
-### Generating a Keystore
-```bash
-keytool -genkey -v -keystore assistral-release-key.keystore -alias assistral -keyalg RSA -keysize 2048 -validity 10000
-```
+## Лицензия
 
-### Converting to Base64 for GitHub Secrets
-```bash
-base64 assistral-release-key.keystore | tr -d '\n'
-```
+Приложение лицензировано по GPLv3.
 
-## Current Release: v3.0
+Использует:
+- Компоненты GMaps WV (https://gitlab.com/divested-mobile/maps) под лицензией GPLv3
 
-- **Version Code**: 300
-- **Version Name**: 3.0
-- **Release Date**: 2025-01-XX
-- **Key Changes**: Complete migration from gptAssist/ChatGPT to Assistral/Mistral Le Chat
+## Участие в разработке
 
-## Release History
+При обнаружении ошибки создайте issue в репозитории GitHub.
+- Чётко опишите проблему с шагами воспроизведения. Скриншоты приветствуются.
+- Укажите версию Android и модель устройства.
+- Будьте максимально точны.
 
-### v3.0 (300) - 2025-01-XX
-- Complete rewrite from gptAssist to Assistral
-- Migrated from ChatGPT to Mistral Le Chat
-- Updated all branding, package names, and metadata
-- First release targeting F-Droid distribution
+Если знаете решение — сообщите в issue и при возможности создайте pull request.
