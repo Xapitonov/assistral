@@ -2,11 +2,8 @@
   <img src="app/src/main/ic_launcher-playstore.png" alt="Assistral Logo" width="128" height="128">
   
   # Ассистрал
-
-
-  [English](README.md) | **Русский**
-  <br>
-  <br>
+[English](README.md) | **Русский**
+</div>
   Простая обёртка WebView для Mistral Le Chat, блокирующая ненужные URL для сосредоточенного чата.
 </div>
 
