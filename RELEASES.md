@@ -1,4 +1,4 @@
-English | [Русский](README_ru.md)
+**English** | [Русский](README_ru.md)
 
 # Release Process
 
